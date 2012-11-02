@@ -7,13 +7,16 @@ Gem::Specification.new do |gem|
   gem.name          = "gates_of_moria"
   gem.version       = GatesOfMoria::VERSION
   gem.authors       = ["Matt Gauger"]
-  gem.email         = ["matt.gauger@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.email         = ["matt@bendyworks.com"]
+  gem.description   = %q{A simple quiz to test Ruby knowledge}
+  gem.summary       = gem.description
+  gem.homepage      = "https://github.com/mathias/gates_of_moria"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+
+  gem.add_development_dependency('rspec', '~> 2.11.0')
+
 end

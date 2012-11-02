@@ -1,6 +1,6 @@
-# GatesOfMoria
+# The Gates Of Moria
 
-TODO: Write a gem description
+A simple quiz to test Ruby knowledge.
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run `gates_of_moria` and follow instructions.
 
 ## Contributing
 
