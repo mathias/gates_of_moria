@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+begin
+  require 'rubygems'
+  gem 'gates_of_moria'
+rescue LoadError
+end
+
+require 'gates_of_moria'
+
+game = GatesOfMoria::Quiz.new(STDOUT)
+game.start

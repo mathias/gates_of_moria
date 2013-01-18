@@ -18,6 +18,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_development_dependency('rspec', '~> 2.11.0')
-  gem.add_development_dependency('turnip', '~> 1.0.0')
+  gem.add_development_dependency('turnip')
+  gem.add_development_dependency('pry')
 
 end
