@@ -19,4 +19,4 @@ Feature: Player Starts the Quiz
     Given I am not playing
     When I start a new quiz
     And I answer the first question incorrectly
-    Then I should be see the first help text
+    Then I should see the first help text

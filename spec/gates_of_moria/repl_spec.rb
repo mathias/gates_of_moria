@@ -24,8 +24,9 @@ module GatesOfMoria
           repl.answer_question(expected_answer, user_input).should be_false
         end
       end
+
       context 'given invalid ruby' do
-        ["foo = ", "lambda { ", ")"].each do |user_input|
+        ["foo", "foo = ", "lambda { ", ")"].each do |user_input|
           it 'should be false (incorrect)' do
             repl = GatesOfMoria::REPL.new(output, input, questions)
             repl.answer_question(expected_answer, user_input).should be_false

@@ -2,12 +2,11 @@
   "questions": [
     {
       "initial_prompt": "Let me know your name by assigning it to a variable called '@name'!",
-      "expected_response": "@name.class == 'String' && @name.length > 0",
-      "help_text": [ "Variables hold information. We use the equal sign to assign information into a variable:\n@name = \"Matt\"", "bar", "baz" ]
+      "expected_response": "@name.class == String && @name.length > 0",
+      "help_texts": [ "Let me know your name by assigning it to a variable called '@name'!", "Variables hold information. We use the equal sign to assign information into a variable:\n@name = \"Matt\"", "bar", "baz" ]
     }, {
-      "initial_prompt": "Try translating a piece of strange text that is stored in @strange_text with the 'strange' method.",
-      "expected_response": "@user_input.should be 'friend'",
-      "help_text": []
+      "expected_response": "result == 'friend'",
+      "help_texts": ["Try translating a piece of strange text that is stored in @strange_text with the 'strange' method."]
     }
   ]
 }

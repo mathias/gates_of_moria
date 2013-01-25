@@ -1,9 +1,9 @@
 {
   "questions":
-    [{ 
+    [{
       "initial_prompt": "Assign 5 to @a",
       "expected_response": "@a == 5",
-      "help_text": [ "foo", "bar", "Go to http://example.com to learn more."]
+      "help_texts": [ "foo", "bar", "Go to http://example.com to learn more."]
      }
     ]
 }

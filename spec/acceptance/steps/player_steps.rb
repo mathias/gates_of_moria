@@ -28,7 +28,11 @@ step 'I answer the first question correctly' do
   @input.gets "name = 'Matt'"
 end
 
-step 'I answer the first question correctly' do
+step 'I answer the first question incorrectly' do
   step 'I should be prompted for the answer to the first question'
   @input.gets "moo = 'baz'"
+end
+
+step "I should see the first help text" do
+  @output.string.should include("Variables hold information. We use the equal sign to assign information into a variable:\n@name = \"Matt\"")
 end
