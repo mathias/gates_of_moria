@@ -8,5 +8,5 @@ end
 
 require 'gates_of_moria'
 
-game = GatesOfMoria::Quiz.new(STDOUT)
+game = GatesOfMoria::Quiz.new(STDOUT, STDIN)
 game.start
