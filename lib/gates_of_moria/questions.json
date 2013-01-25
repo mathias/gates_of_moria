@@ -6,7 +6,8 @@
       "help_texts": [ "Let me know your name by assigning it to a variable called '@name'!", "Variables hold information. We use the equal sign to assign information into a variable:\n@name = \"Matt\"", "bar", "baz" ]
     }, {
       "expected_response": "result == 'friend'",
-      "help_texts": ["Try translating a piece of strange text that is stored in @strange_text with the 'strange' method."]
+      "help_texts": ["Now send the string 'sevraq' to the translate method."],
+      "setup_code": "def translate(s); s.tr!('A-Za-z', 'N-ZA-Mn-za-m'); end"
     }
   ]
 }

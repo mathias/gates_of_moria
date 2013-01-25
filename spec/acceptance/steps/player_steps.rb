@@ -20,7 +20,7 @@ step 'I should be prompted for the answer to the first question' do
 end
 
 step 'I should be prompted for the answer to the second question' do
-  @output.string.should include("Try translating a piece of strange text that is stored in @strange_text with the 'strange' method.")
+  @output.string.should include("Now send the string 'sevraq' to the translate method.")
 end
 
 step 'I answer the first question correctly' do
@@ -35,4 +35,12 @@ end
 
 step "I should see the first help text" do
   @output.string.should include("Variables hold information. We use the equal sign to assign information into a variable:\n@name = \"Matt\"")
+end
+
+step "I should not see the first help text" do
+  @output.string.should_not include("Variables hold information. We use the equal sign to assign information into a variable:\n@name = \"Matt\"")
+end
+
+step "I should see that I was correct" do
+  @output.string.should include("Correct!")
 end
