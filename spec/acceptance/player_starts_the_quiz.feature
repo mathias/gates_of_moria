@@ -7,4 +7,16 @@ Feature: Player Starts the Quiz
     Given I am not playing
     When I start a new quiz
     Then I should see the Gates of Moria
-    And I should be prompted for input
+    And I should be prompted for the answer to the first question
+
+  Scenario: user answers first question correctly
+    Given I am not playing
+    When I start a new quiz
+    When I answer the first question correctly
+    Then I should be prompted for the answer to the second question
+
+  Scenario: user answers first question incorrectly
+    Given I am not playing
+    When I start a new quiz
+    And I answer the first question incorrectly
+    Then I should be see the first help text

@@ -1,12 +1,12 @@
 {
   "questions": [
     {
-      "initial_prompt": "Let me know your name by assigning it to a variable called 'name'!",
-      "expected_response": "name.should be_a_kind_of String",
+      "initial_prompt": "Let me know your name by assigning it to a variable called '@name'!",
+      "expected_response": "@name.class == 'String' && @name.length > 0",
       "help_text": [ "Variables hold information. We use the equal sign to assign information into a variable:\n@name = \"Matt\"", "bar", "baz" ]
     }, {
-      "initial_prompt": "Assign 5 to @a",
-      "expected_response": "@a.should be 5 ",
+      "initial_prompt": "Try translating a piece of strange text that is stored in @strange_text with the 'strange' method.",
+      "expected_response": "@user_input.should be 'friend'",
       "help_text": []
     }
   ]
