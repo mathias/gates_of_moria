@@ -5,8 +5,8 @@ module GatesOfMoria
     def initialize(output_buffer, input_buffer, motd = nil)
       @output_buffer = output_buffer
       @input_buffer = input_buffer
-      @motd = motd || File.read('lib/gates_of_moria/motd.txt')
-      @questions = File.read('lib/gates_of_moria/questions.json')
+      @motd = motd || File.read(File.expand_path("../motd.txt", __FILE__))
+      @questions = File.read(File.expand_path("../questions.json", __FILE__))
     end
 
     def start
