@@ -6,7 +6,7 @@ require 'gates_of_moria/version'
 Gem::Specification.new do |gem|
   gem.name          = "gates_of_moria"
   gem.version       = GatesOfMoria::VERSION
-  gem.authors       = ["Matt Gauger"]
+  gem.authors       = ["Matt Gauger", "Jaymes Waters"]
   gem.email         = ["matt@bendyworks.com"]
   gem.description   = %q{A simple quiz to test Ruby knowledge}
   gem.summary       = gem.description
