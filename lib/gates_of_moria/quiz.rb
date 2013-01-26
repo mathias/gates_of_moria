@@ -11,8 +11,8 @@ module GatesOfMoria
 
     def start
       @output_buffer.puts @motd
-      @repl = GatesOfMoria::REPL.new(@output_buffer, @input_buffer, @questions)
 
+      @repl = GatesOfMoria::REPL.new(@output_buffer, @input_buffer, @questions)
       @repl.start
     end
 
