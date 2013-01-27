@@ -17,7 +17,7 @@ module GatesOfMoria
       player_won = @repl.start
 
       if player_won
-        @output_buffer.puts "Congratulations! You've opened the door to the mines.\n\nGood luck on your future adventures.\n\nMight I suggest trying RubyWarrior next?\n"
+        @output_buffer.puts "Congratulations! You've opened the door to the mines.\n\nGood luck on your future adventures.\n\nMight I suggest trying RubyWarrior next?\n\n  https://github.com/ryanb/ruby-warrior\n"
       else
         @output_buffer.puts "\n\nYour adventures with Ruby are not over yet!\n\nMay I suggest trying the game again, or going to read up on how Ruby works at:\n\n  http://www.ruby-lang.org/en/documentation/quickstart/\n"
       end
