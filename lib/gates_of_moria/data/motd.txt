@@ -36,4 +36,6 @@
 
 Welcome to the Gates of Moria! After many adventures, you and your companions have come upon a door to the Dwarven kingdom of Moria. But you cannot open the door by brute strength, so you will have to use your wits.
 
+Don't worry so much about getting the questions right on the first try. We'll help you along your way to answer all the questions in Ruby code.
+
 You can leave the game at any time by typing 'exit'
