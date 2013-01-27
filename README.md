@@ -1,6 +1,6 @@
 # The Gates Of Moria
 
-A simple quiz to test Ruby knowledge.
+An adventure in learning Ruby!
 
 ## Installation
 
