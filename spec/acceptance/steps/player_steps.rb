@@ -6,41 +6,50 @@ step 'I start a new quiz' do
   @game.start!
 end
 
+step 'I quit' do
+  @game << prepare_input("exit")
+end
+
+step 'the game should end' do
+  @game.kill!
+end
+
 step 'I should see the Gates of Moria' do
-  #@output.string.should include(@motd)
+  expected_pattern = massage_pattern("DOORS OF DURIN")
+  @game.wait_for(:output, expected_pattern)
 end
 
 step 'I should be prompted for the answer to the first question' do
-  expected_pattern = /Let me know your name by assigning it/
+  expected_pattern = /Are you ready to begin your adventure/
   @game.wait_for(:output, expected_pattern)
 end
 
 step 'I should be prompted for the answer to the second question' do
-  expected_pattern = /Now send the string 'sevraq' to the translate method/
+  expected_pattern = /Now give me the name Gandalf as a String/
   @game.wait_for(:output, expected_pattern)
 end
 
 step 'I answer the first question correctly' do
   step 'I should be prompted for the answer to the first question'
-  @game << "@name = 'Matt'\n"
+  @game << prepare_input("true")
 end
 
 step 'I answer the first question incorrectly' do
   step 'I should be prompted for the answer to the first question'
-  @game << "moo = 'baz'\n"
+  @game << prepare_input("moo")
 end
 
 step "I should see the first help text" do
-  expected_pattern = /Variables hold information/
+  expected_pattern = /In Ruby, we say things are/
   @game.wait_for(:output, expected_pattern)
 end
 
 step "I should not see the first help text" do
-  pattern = /Variables hold information/
+  pattern = /In Ruby, we say things are/
   @game.check_until(pattern).should be_nil
 end
 
 step "I should see that I was correct" do
-  pattern = Regexp.new("Correct! Next up...")
+  pattern = massage_pattern("Correct! Next up...")
   @game.wait_for(:output, pattern)
 end

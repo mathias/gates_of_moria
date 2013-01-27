@@ -1,12 +1,33 @@
 {
   "questions": [
     {
-      "initial_prompt": "Let me know your name by assigning it to a variable called '@name'!",
-      "expected_response": "@name.class == String && @name.length > 0",
-      "help_texts": [ "Let me know your name by assigning it to a variable called '@name'!", "Variables hold information. We use the equal sign to assign information into a variable:\n@name = \"Matt\"", "bar", "baz" ]
-    }, {
+      "help_texts": [ "Are you ready to begin your adventure? Answer in Ruby.",
+                      "In Ruby, we say things are 'truthy' or correct when they are true.",
+                      "We often use true to say yes, as well",
+                      "Try telling Ruby that it is 'true' that you want to begin your adventure.",
+                      "Try reading http://www.ruby-lang.org/en/documentation/quickstart/ to get started!"
+                    ],
+      "expected_response": "result == true"
+    },
+    {
+      "help_texts": [ "Now give me the name Gandalf as a String."
+                    ],
+      "expected_response": "result == 'Gandalf'"
+    },
+    {
+      "help_texts": [ "Let me know your name by assigning it to a variable called '@name'!",
+                      "Variables hold information. We use the equal sign to assign information into a variable:\n@name = \"Matt\"",
+                      "In this case, we want to assign the value of your name, as a string, to the variable @name.",
+                      "I think you might like reading about variables: http://mislav.uniqpath.com/poignant-guide/book/chapter-3.html#section2"
+                    ],
+      "expected_response": "@name.class == String && @name.length > 0"
+    },
+    {
+      "help_texts": [ "Now send the string 'sevraq' to the translate method.",
+                      "We say that we are sending a message to an object when we invoke a method.",
+                      "You can send a message to an object like this:\n object.method(parameters)"
+                    ],
       "expected_response": "result == 'friend'",
-      "help_texts": ["Now send the string 'sevraq' to the translate method."],
       "setup_code": "def translate(s); s.tr!('A-Za-z', 'N-ZA-Mn-za-m'); end"
     }
   ]

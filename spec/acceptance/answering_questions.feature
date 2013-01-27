@@ -7,7 +7,6 @@ Feature: Answering questions
     Then I should not see the first help text
     And I should see that I was correct
     And I should be prompted for the answer to the second question
-    And I should quit the game
 
   Scenario: user answers first question incorrectly
     Given I am not playing
