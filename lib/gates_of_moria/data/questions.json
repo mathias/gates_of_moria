@@ -40,7 +40,7 @@
       "_comments": [ "So now we know that the strange word 'sevraq' is really the word 'friend' when we run it through the translator!"]
     },
     {
-      "title": "\nPart 3: Objects\n===============\n",
+      "title": "\nPart 4: Objects\n===============\n",
       "help_texts": [ "The great big door is before you.\n\nSend the message 'read' to the Door object to read what it says.",
                       "When we send a message to an object, we're invoking a method with that name on the object.",
                       "The Door class has a method called 'read'.",
@@ -51,13 +51,20 @@
       "setup_code": "load 'lib/gates_of_moria/data/door.rb'"
     },
     {
-      "title": "\nPart 4: Putting it all together\n===============\n",
+      "title": "\nPart 5: Putting it all together\n===============================\n",
       "help_texts": [ "So now we've got this weird text from the Door, and it appears to be the same strange language that we translated before.\n\nLet's use our translate method again on the String returned by reading the Door.",
                       "Remember how we sent the String 'sevraq' as a parameter to translate() before?\n\nWe can do the same thing with Door.read, because Door.read will return the strange text as a String and send it as a parameter to translate().",
                       "If I wanted to translate some text from the first page of a book, I might do this:\n\n  translate(OldBook.first_page)"
                     ],
       "expected_response": "result = 'speak friend and enter'"
-  }
+    },
+    {
+      "title": "\nPart 6: Solving the Riddle\n==========================\n",
+      "help_texts": [ "Huh, the secret message on the door is the text 'speak friend and enter'\n\nNow that we know that the text on the door is a riddle, and we know how to speak in it's secret language, try sending the Door the message 'tell' with the parameter of the answer to the riddle."
+      ],
+      "expected_response": "result == 'The door opens!'",
+      "setup_code": ""
+    }
   ],
 
   "question_template":

@@ -5,10 +5,12 @@ module GatesOfMoria
       @input_buffer = input_buffer
 
       @questions = JSON.parse(questions)['questions']
+      @last_question = @questions.pop
     end
 
     def start
       ask_the_questions
+      ask_last_question
     end
 
     def answer_question(expected_answer, user_input)
@@ -26,6 +28,11 @@ module GatesOfMoria
     end
 
     private
+
+    def ask_last_question
+      return prompt_with_help_texts @last_question
+    end
+
     def ask_the_questions
       @questions.each do |question|
         if prompt_with_help_texts question
