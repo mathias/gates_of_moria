@@ -48,7 +48,7 @@
                       "If you've got time, you might want to watch this video to get a deep dive into what these object things are:\n\nhttp://confreaks.com/videos/1133-scrc2012-thinking-in-objects\n\n(it is roughly 26 minutes long)"
       ],
       "expected_response": "result == 'fcrnx sevraq naq ragre'",
-      "setup_code": "load 'lib/gates_of_moria/data/door.rb'"
+      "setup_code": "load File.expand_path('../lib/gates_of_moria/data/door.rb', __FILE__)"
     },
     {
       "title": "\nPart 5: Putting it all together\n===============================\n",
