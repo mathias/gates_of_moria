@@ -21,7 +21,7 @@ module GatesOfMoria
         politely_say_their_ruby_is_invalid
         return false
       end
-      @output_buffer.puts "\n=> #{result}\n"
+      @output_buffer.puts "\n=> #{result}\n\n"
       eval(expected_answer)
     end
 
@@ -29,7 +29,6 @@ module GatesOfMoria
     def ask_the_questions
       @questions.each do |question|
         if prompt_with_help_texts question
-          display_you_are_correct
           next
         end
       end
@@ -38,6 +37,7 @@ module GatesOfMoria
 
     def prompt_with_help_texts question
       eval(question['setup_code']) if question.has_key?('setup_code')
+      @output_buffer.puts(question['title']) if question.has_key?('title')
       question['help_texts'].each do |ht|
         prompt_question ht
 
@@ -62,10 +62,6 @@ module GatesOfMoria
 
     def politely_say_they_are_wrong
       @output_buffer.puts("Sorry, that's not it.")
-    end
-
-    def display_you_are_correct
-      @output_buffer.puts("Correct! Next up...")
     end
 
     def display_leaving_game

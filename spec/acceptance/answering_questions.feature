@@ -5,7 +5,6 @@ Feature: Answering questions
     When I start a new quiz
     When I answer the first question correctly
     Then I should not see the first help text
-    And I should see that I was correct
     And I should be prompted for the answer to the second question
 
   Scenario: user answers first question incorrectly

@@ -20,12 +20,12 @@ step 'I should see the Gates of Moria' do
 end
 
 step 'I should be prompted for the answer to the first question' do
-  expected_pattern = /Are you ready to begin your adventure/
+  expected_pattern = massage_pattern "Are you ready to begin your adventure"
   @game.wait_for(:output, expected_pattern)
 end
 
 step 'I should be prompted for the answer to the second question' do
-  expected_pattern = /Now give me the name Gandalf as a String/
+  expected_pattern = massage_pattern "Now give me the name Gandalf as a String"
   @game.wait_for(:output, expected_pattern)
 end
 
@@ -40,16 +40,11 @@ step 'I answer the first question incorrectly' do
 end
 
 step "I should see the first help text" do
-  expected_pattern = /In Ruby, we say things are/
+  expected_pattern = massage_pattern('In Ruby, we say things are')
   @game.wait_for(:output, expected_pattern)
 end
 
 step "I should not see the first help text" do
-  pattern = /In Ruby, we say things are/
+  pattern = massage_pattern('In Ruby, we say things are')
   @game.check_until(pattern).should be_nil
-end
-
-step "I should see that I was correct" do
-  pattern = massage_pattern("Correct! Next up...")
-  @game.wait_for(:output, pattern)
 end
