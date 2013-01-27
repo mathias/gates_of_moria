@@ -33,3 +33,7 @@
                       ;____:   `._        `'           _,'   ;____:
                      {______}     \___________________/     {______}
                  SSt |______|_______________________________|______|
+
+Welcome to the Gates of Moria! After many adventures, you and your companions have come upon a door to the Dwarven kingdom of Moria. But you cannot open the door by brute strength, so you will have to use your wits.
+
+You can leave the game at any time by typing 'exit'

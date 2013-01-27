@@ -14,6 +14,9 @@ module GatesOfMoria
     def answer_question(expected_answer, user_input)
       begin
         result = eval(user_input)
+      rescue SystemExit
+        display_leaving_game
+        exit
       rescue SyntaxError, Exception
         politely_say_their_ruby_is_invalid
         return false
@@ -63,6 +66,10 @@ module GatesOfMoria
 
     def display_you_are_correct
       @output_buffer.puts("Correct! Next up...")
+    end
+
+    def display_leaving_game
+      @output_buffer.puts("You are leaving the game. Play again soon!\n")
     end
   end
 end
