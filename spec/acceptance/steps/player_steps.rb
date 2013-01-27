@@ -90,6 +90,18 @@ step "I answer the last question incorrectly" do
   @game.wait_for(:output, massage_pattern('try sending the Door the message'))
   @game << prepare_input("Door.tell('moo')")
   @game.wait_for(:output, massage_pattern("=> The door remains firmly shut."))
+
+  #answer second help text wrong:
+  @game << prepare_input("Door.tell('moo')")
+  @game.wait_for(:output, massage_pattern("=> The door remains firmly shut."))
+
+  #answer third help text wrong:
+  @game << prepare_input("Door.tell('moo')")
+  @game.wait_for(:output, massage_pattern("=> The door remains firmly shut."))
+
+  #answer fourth help text wrong:
+  @game << prepare_input("Door.tell('moo')")
+  @game.wait_for(:output, massage_pattern("=> The door remains firmly shut."))
 end
 
 step "I should see encouraging text to keep trying" do

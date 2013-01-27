@@ -60,7 +60,10 @@
     },
     {
       "title": "\nPart 6: Solving the Riddle\n==========================\n",
-      "help_texts": [ "Huh, the secret message on the door is the text 'speak friend and enter'\n\nNow that we know that the text on the door is a riddle, and we know how to speak in it's secret language, try sending the Door the message 'tell' with the parameter of the answer to the riddle."
+      "help_texts": [ "Huh, the secret message on the door is the text 'speak friend and enter'\n\nNow that we know that the text on the door is a riddle, and we know how to speak in it's secret language, try sending the Door the message 'tell' with the parameter of the answer to the riddle.",
+                      "Remember that we need to speak in the Door's language.\n\n  You can use the translate() method to turn the word 'friend' back into its strange language.",
+                      "The tell() method on the Door class tries to answer the riddle. Give it another try!",
+                      "The Door expects the tell method to receive the string 'sevraq', which is its secret word for 'friend'!"
       ],
       "expected_response": "result == 'The door opens!'",
       "setup_code": ""
