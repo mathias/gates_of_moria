@@ -4,7 +4,17 @@ A simple quiz to test Ruby knowledge.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+You'll need Ruby 1.9.3 to play the game. See what version of Ruby you have by running
+
+    ruby --version
+    
+If it doesn't say something like "ruby 1.9.3p123" at the beginning, then should follow the instructions at https://rvm.io/ to install RVM and then install Ruby 1.9.3 with it.
+
+Now, you can install the gem to your global gemset with:
+
+    $ gem install gates_of_moria
+
+Or if you are using Bundler and want to put it in a Gemfile, addd this line to your Gemfile:
 
     gem 'gates_of_moria'
 
@@ -12,13 +22,9 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install gates_of_moria
-
 ## Usage
 
-Run `gates_of_moria` and follow instructions.
+Run `gates_of_moria` and follow the on-screen instructions. Enjoy!
 
 ## Contributing
 
